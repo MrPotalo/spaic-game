@@ -1,14 +1,13 @@
 {
-  "name": "socket-test",
+  "name": "spaic-game",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"nodemon src/index.js\" \"cd client && yarn start\"",
+    "dev": "nodemon src/index.js",
     "prod": "yarn heroku-postbuild && yarn start",
     "all": "yarn && cd client && yarn",
-    "start": "set PORT=3000 && node src/index.js",
-    "heroku-postbuild": "cd client && yarn && yarn build"
+    "start": "set PORT=3000 && node src/index.js"
   },
   "dependencies": {
     "concurrently": "^4.0.1",
